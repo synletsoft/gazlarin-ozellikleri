@@ -1411,6 +1411,18 @@ self.C3_ExpressionFuncs = [
 			const v1 = p._GetNode(1).GetVar();
 			return () => (f0(((Math.floor((v1.GetValue() * 10)) / 10)).toString(), "(\\d+(?:[.,]\\d)?).*", "", "$1") + " K");
 		},
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			const v1 = p._GetNode(1).GetVar();
+			const v2 = p._GetNode(2).GetVar();
+			const v3 = p._GetNode(3).GetVar();
+			return () => (((v0.GetValue() * v1.GetValue()) * v2.GetValue()) / v3.GetValue());
+		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			const v1 = p._GetNode(1).GetVar();
+			return () => (f0(((Math.floor((v1.GetValue() * 100)) / 100)).toString(), "(\\d+[.,]\\d{1,2}).*", "", "$1") + " atm");
+		},
 		() => 0.3,
 		() => "https://x.com/home",
 		p => {

@@ -1,2 +1,0 @@
-# gazlarin-ozellikleri
-
